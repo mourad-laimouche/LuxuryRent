@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
   plugins: [react()],
+  base: "./",  // CRUCIAL pour Netlify !!!
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "client", "src"),
@@ -19,7 +20,9 @@ export default defineConfig({
     outDir: path.resolve(__dirname, "dist/public"),
     emptyOutDir: true,
     rollupOptions: {
-      external: ['ogl', 'gsap']
+      output: {
+        manualChunks: undefined,
+      },
     },
     assetsDir: 'assets',
     copyPublicDir: true

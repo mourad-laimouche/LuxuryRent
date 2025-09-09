@@ -11,13 +11,49 @@
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+      /* Fallback si CSS ne charge pas */
+      body { 
+        margin: 0; 
+        background: #0a0a0a; 
+        color: white; 
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        min-height: 100vh;
+      }
+      #root { 
+        min-height: 100vh; 
+      }
+      /* Loading fallback */
+      .loading-fallback {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div class="loading-fallback">
+        <div>
+          <h1 style="color: #D4AF37; font-family: 'Playfair Display', serif;">Luxury Location</h1>
+          <p>Chargement en cours...</p>
+        </div>
+      </div>
+      <noscript>
+        <div style="display: flex; justify-content: center; align-items: center; min-height: 100vh; background: #0a0a0a; color: white; font-family: Arial, sans-serif;">
+          <div style="text-align: center;">
+            <h1 style="color: #D4AF37;">JavaScript Requis</h1>
+            <p>Veuillez activer JavaScript pour voir ce site.</p>
+          </div>
+        </div>
+      </noscript>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
