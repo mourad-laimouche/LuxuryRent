@@ -1257,7 +1257,7 @@ export const cars: Car[] = [
     category: 'SUV',
     pricePerDay: 160,
     pricePerDayDA: 40000,
-    image: '/images/cars/ateca/ateca (1).jpg',
+    image: '/images/cars/ateca/ateca-1.jpg',
     gallery: [
       '/images/cars/ateca/ateca-1.jpg',
       '/images/cars/ateca/ateca (2).jpg'
