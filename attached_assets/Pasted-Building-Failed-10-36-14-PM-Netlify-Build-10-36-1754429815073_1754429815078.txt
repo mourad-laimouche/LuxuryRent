@@ -1,0 +1,106 @@
+Building
+Failed
+10:36:14 PM: Netlify Build                                                 
+10:36:14 PM: ────────────────────────────────────────────────────────────────
+10:36:14 PM: ​
+10:36:14 PM: ❯ Version
+10:36:14 PM:   @netlify/build 35.0.2
+10:36:14 PM: ​
+10:36:14 PM: ❯ Flags
+10:36:14 PM:   accountId: 66d09a71b5c0a8414ba97fe5
+10:36:14 PM:   baseRelDir: true
+10:36:14 PM:   buildId: 68927939c71565083170b618
+10:36:14 PM:   deployId: 68927939c71565083170b61a
+10:36:14 PM: ​
+10:36:14 PM: ❯ Current directory
+10:36:14 PM:   /opt/build/repo
+10:36:14 PM: ​
+10:36:14 PM: ❯ Config file
+10:36:14 PM:   /opt/build/repo/netlify.toml
+10:36:14 PM: ​
+10:36:14 PM: ❯ Context
+10:36:14 PM:   production
+10:36:14 PM: ​
+10:36:14 PM: build.command from netlify.toml                               
+10:36:14 PM: ────────────────────────────────────────────────────────────────
+10:36:14 PM: ​
+10:36:14 PM: $ npm ci && npx vite build
+10:36:20 PM: npm warn deprecated node-domexception@1.0.0: Use your platform's native DOMException instead
+10:36:20 PM: added 398 packages, and audited 399 packages in 6s
+10:36:20 PM: 53 packages are looking for funding
+10:36:20 PM:   run `npm fund` for details
+10:36:20 PM: 3 low severity vulnerabilities
+10:36:20 PM: To address all issues, run:
+10:36:20 PM:   npm audit fix
+10:36:20 PM: Run `npm audit` for details.
+10:36:21 PM: npm warn exec The following package was not found and will be installed: vite@7.0.6
+10:36:24 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+10:36:24 PM: failed to load config from /opt/build/repo/vite.config.ts
+10:36:24 PM: error during build:
+10:36:24 PM: Error [ERR_MODULE_NOT_FOUND]: Cannot find package 'vite' imported from /opt/build/repo/node_modules/.vite-temp/vite.config.ts.timestamp-1754429784069-f12d05c69d44a.mjs
+10:36:24 PM:     at Object.getPackageJSONURL (node:internal/modules/package_json_reader:255:9)
+10:36:24 PM:     at packageResolve (node:internal/modules/esm/resolve:767:81)
+10:36:24 PM:     at moduleResolve (node:internal/modules/esm/resolve:853:18)
+10:36:24 PM:     at defaultResolve (node:internal/modules/esm/resolve:983:11)
+10:36:24 PM:     at ModuleLoader.defaultResolve (node:internal/modules/esm/loader:783:12)
+10:36:24 PM:     at #cachedDefaultResolve (node:internal/modules/esm/loader:707:25)
+10:36:24 PM:     at ModuleLoader.resolve (node:internal/modules/esm/loader:690:38)
+10:36:24 PM:     at ModuleLoader.getModuleJobForImport (node:internal/modules/esm/loader:307:38)
+10:36:24 PM:     at ModuleJob._link (node:internal/modules/esm/module_job:183:49)
+10:36:24 PM: ​
+10:36:24 PM: "build.command" failed                                        
+10:36:24 PM: ────────────────────────────────────────────────────────────────
+10:36:24 PM: ​
+10:36:24 PM:   Error message
+10:36:24 PM:   Command failed with exit code 1: npm ci && npx vite build (https://ntl.fyi/exit-code-1)
+10:36:24 PM: ​
+10:36:24 PM:   Error location
+10:36:24 PM:   In build.command from netlify.toml:
+10:36:24 PM:   npm ci && npx vite build
+10:36:24 PM: ​
+10:36:24 PM:   Resolved config
+10:36:24 PM:   build:
+10:36:24 PM:     command: npm ci && npx vite build
+10:36:24 PM:     commandOrigin: config
+10:36:24 PM:     environment:
+10:36:24 PM:       - NODE_ENV
+10:36:24 PM:     processing:
+10:36:24 PM:       css:
+10:36:24 PM:         bundle: true
+10:36:24 PM:         minify: true
+10:36:24 PM:       html:
+10:36:24 PM:         pretty_urls: true
+10:36:24 PM:       js:
+10:36:24 PM:         bundle: true
+10:36:24 PM:         minify: true
+10:36:24 PM:       skip_processing: false
+10:36:24 PM:     publish: /opt/build/repo/dist/public
+10:36:24 PM:     publishOrigin: config
+10:36:24 PM:   headers:
+10:36:24 PM:     - for: /*
+      values:
+        Content-Security-Policy: "default-src 'self'; img-src 'self' data: https:;
+          style-src 'self' 'unsafe-inline' https:; script-src 'self'; font-src
+          'self' https:; connect-src 'self' https:;"
+        Referrer-Policy: strict-origin-when-cross-origin
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+    - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.css
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.js
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+10:36:24 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+10:36:24 PM: Failing build: Failed to build site
+10:36:24 PM: Finished processing build request in 30.126s

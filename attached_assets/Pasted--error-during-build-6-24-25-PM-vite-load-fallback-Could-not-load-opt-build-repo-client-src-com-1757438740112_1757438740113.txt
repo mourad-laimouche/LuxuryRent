@@ -1,0 +1,37 @@
+ error during build:
+6:24:25 PM: [vite:load-fallback] Could not load /opt/build/repo/client/src/components/LightRaysSimple (imported by client/src/pages/accueil.tsx): ENOENT: no such file or directory, open '/opt/build/repo/client/src/components/LightRaysSimple'
+6:24:25 PM:     at async open (node:internal/fs/promises:641:25)
+6:24:25 PM:     at async Object.readFile (node:internal/fs/promises:1245:14)
+6:24:25 PM:     at async Object.load (file:///opt/build/repo/node_modules/vite/dist/node/chunks/dep-C6uTJdX2.js:65341:25)
+6:24:25 PM:     at async PluginDriver.hookFirstAndGetPlugin (file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:20689:28)
+6:24:25 PM:     at async file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:19809:33
+6:24:25 PM:     at async Queue.work (file:///opt/build/repo/node_modules/rollup/dist/es/shared/node-entry.js:20899:32)
+6:24:25 PM: ❌ Build failed: Command failed: npx vite build --config vite.config.netlify.js
+6:24:25 PM: ​
+6:24:25 PM: "build.command" failed                                        
+6:24:25 PM: ────────────────────────────────────────────────────────────────
+6:24:25 PM: ​
+6:24:25 PM:   Error message
+6:24:25 PM:   Command failed with exit code 1: npm install --production=false && node build-netlify.js (https://ntl.fyi/exit-code-1)
+6:24:25 PM: ​
+6:24:25 PM:   Error location
+6:24:25 PM:   In build.command from netlify.toml:
+6:24:25 PM:   npm install --production=false && node build-netlify.js
+6:24:25 PM: ​
+6:24:25 PM:   Resolved config
+6:24:25 PM:   build:
+6:24:25 PM:     command: npm install --production=false && node build-netlify.js
+6:24:25 PM:     commandOrigin: config
+6:24:25 PM:     environment:
+6:24:25 PM:       - NODE_ENV
+6:24:25 PM:     processing:
+6:24:25 PM:       css:
+6:24:25 PM:         bundle: true
+6:24:25 PM:         minify: true
+6:24:25 PM:       html:
+6:24:25 PM:         pretty_urls: true
+6:24:25 PM:       js:
+6:24:25 PM:         bundle: true
+6:24:25 PM:         minify: true
+6:24:25 PM:       skip_processing: false
+6:24:25 PM:     publish: /opt/build/repo/dist/public

@@ -1,0 +1,84 @@
+10:18:08 PM: Netlify Build                                                 
+10:18:08 PM: ────────────────────────────────────────────────────────────────
+10:18:08 PM: ​
+10:18:08 PM: ❯ Version
+10:18:08 PM:   @netlify/build 35.0.2
+10:18:08 PM: ​
+10:18:08 PM: ❯ Flags
+10:18:08 PM:   accountId: 66d09a71b5c0a8414ba97fe5
+10:18:08 PM:   baseRelDir: true
+10:18:08 PM:   buildId: 689274f521828400689e8a52
+10:18:08 PM:   deployId: 689274f521828400689e8a54
+10:18:08 PM: ​
+10:18:08 PM: ❯ Current directory
+10:18:08 PM:   /opt/build/repo
+10:18:08 PM: ​
+10:18:08 PM: ❯ Config file
+10:18:08 PM:   /opt/build/repo/netlify.toml
+10:18:08 PM: ​
+10:18:08 PM: ❯ Context
+10:18:08 PM:   production
+10:18:08 PM: ​
+10:18:08 PM: build.command from netlify.toml                               
+10:18:08 PM: ────────────────────────────────────────────────────────────────
+10:18:08 PM: ​
+10:18:08 PM: $ vite build
+10:18:08 PM: bash: line 1: vite: command not found
+10:18:09 PM: ​
+10:18:09 PM: "build.command" failed                                        
+10:18:09 PM: ────────────────────────────────────────────────────────────────
+10:18:09 PM: ​
+10:18:09 PM:   Error message
+10:18:09 PM:   Command failed with exit code 127: vite build (https://ntl.fyi/exit-code-127)
+10:18:09 PM: ​
+10:18:09 PM:   Error location
+10:18:09 PM:   In build.command from netlify.toml:
+10:18:09 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+10:18:09 PM:   vite build
+10:18:09 PM: ​
+10:18:09 PM:   Resolved config
+10:18:09 PM:   build:
+10:18:09 PM:     command: vite build
+10:18:09 PM:     commandOrigin: config
+10:18:09 PM:     environment:
+10:18:09 PM:       - NODE_ENV
+10:18:09 PM:     processing:
+10:18:09 PM:       css:
+10:18:09 PM:         bundle: true
+10:18:09 PM:         minify: true
+10:18:09 PM:       html:
+10:18:09 PM:         pretty_urls: true
+10:18:09 PM:       js:
+10:18:09 PM:         bundle: true
+10:18:09 PM:         minify: true
+10:18:09 PM:       skip_processing: false
+10:18:09 PM:     publish: /opt/build/repo/dist/public
+10:18:09 PM:     publishOrigin: config
+10:18:09 PM:   headers:
+10:18:09 PM:     - for: /*
+      values:
+        Content-Security-Policy: "default-src 'self'; img-src 'self' data: https:;
+          style-src 'self' 'unsafe-inline' https:; script-src 'self'; font-src
+          'self' https:; connect-src 'self' https:;"
+        Referrer-Policy: strict-origin-when-cross-origin
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+    - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.css
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.js
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+10:18:09 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+10:18:09 PM: Failing build: Failed to build site
+10:18:09 PM: Finished processing build request in 27.329s

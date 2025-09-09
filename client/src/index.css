@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 64%);
+  --popover: hsl(0, 0%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 16%);
+  --input: hsl(0, 0%, 16%);
+  --primary: hsl(43, 58%, 54%);
+  --primary-foreground: hsl(0, 0%, 4%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(60, 9%, 98%);
+  --ring: hsl(43, 58%, 54%);
+  --radius: 0.5rem;
+  
+  /* Luxury theme colors */
+  --luxury-black: hsl(0, 0%, 4%);
+  --luxury-dark: hsl(0, 0%, 10%);
+  --luxury-gold: hsl(43, 58%, 54%);
+  --luxury-gold-bright: hsl(51, 100%, 50%);
+  --luxury-gray: hsl(0, 0%, 16%);
+  --luxury-gray-light: hsl(0, 0%, 23%);
+}
+
+.dark {
+  --background: hsl(0, 0%, 4%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(0, 0%, 10%);
+  --muted-foreground: hsl(0, 0%, 64%);
+  --popover: hsl(0, 0%, 10%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(0, 0%, 10%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(0, 0%, 16%);
+  --input: hsl(0, 0%, 16%);
+  --primary: hsl(43, 58%, 54%);
+  --primary-foreground: hsl(0, 0%, 4%);
+  --secondary: hsl(0, 0%, 10%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(0, 0%, 16%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(43, 58%, 54%);
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+  }
+
+  .font-display {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  }
+}
+
+@layer utilities {
+  .luxury-gradient {
+    background: linear-gradient(135deg, var(--luxury-black) 0%, var(--luxury-dark) 50%, var(--luxury-gray-light) 100%);
+  }
+  
+  .luxury-text-gradient {
+    background: linear-gradient(135deg, hsl(0, 0%, 98%) 0%, hsl(43, 58%, 54%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Optimisations GPU pour les galeries d'images */
+  .car-gallery-optimized {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform;
+    contain: layout style paint;
+  }
+
+  .car-gallery-optimized img {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+  }
+
+  /* Contrôles instantanés pour navigation rapide */
+  .gallery-control {
+    will-change: transform, opacity;
+    transition: none;
+  }
+
+  .gallery-control:hover {
+    transform: translateZ(0) scale(1.05);
+  }
+
+  .gallery-control:active {
+    transform: translateZ(0) scale(0.95);
+  }
+}

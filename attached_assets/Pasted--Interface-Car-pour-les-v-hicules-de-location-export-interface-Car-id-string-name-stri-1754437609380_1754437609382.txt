@@ -1,0 +1,2014 @@
+// Interface Car pour les véhicules de location
+export interface Car {
+  id: string;
+  name: string;
+  brand: string;
+  category: string;
+  price: number;
+  image: string;
+  images?: string[]; // Galerie d'images
+  description: string;
+  technicalSpecs: {
+    engine: string;
+    power: string;
+    acceleration: string;
+    topSpeed: string;
+    transmission: string;
+    fuel: string;
+    consumption: string;
+    seats: string;
+  };
+  equipment: string[];
+}
+
+// Import des vraies images de voitures depuis le dossier cars
+import peugeot308_1 from '@/images/cars/308/308 (1).jpg';
+import peugeot308_2 from '@/images/cars/308/308 (2).jpg';
+import peugeot308_3 from '@/images/cars/308/308 (3).jpg';
+import peugeot308_4 from '@/images/cars/308/308 (4).jpg';
+import peugeot308_5 from '@/images/cars/308/308 (5).jpg';
+import peugeot308_6 from '@/images/cars/308/308 (6).jpg';
+import peugeot308_7 from '@/images/cars/308/308 (7).jpg';
+import bmw320d_1 from '@/images/cars/320d/320d (1).jpg';
+import bmw320d_2 from '@/images/cars/320d/320d (2).jpg';
+import bmw320d_3 from '@/images/cars/320d/320d (3).jpg';
+import bmw320d_4 from '@/images/cars/320d/320d (4).jpg';
+import bmw420d_1 from '@/images/cars/420d/420d (1).jpg';
+import bmw420d_2 from '@/images/cars/420d/420d (2).jpg';
+import bmw420d_3 from '@/images/cars/420d/420d (3).jpg';
+import bmw420d_4 from '@/images/cars/420d/420d (4).jpg';
+import bmw520d_1 from '@/images/cars/520d/520d (1).jpg';
+import bmw520d_2 from '@/images/cars/520d/520d (2).jpg';
+import bmw520d_3 from '@/images/cars/520d/520d (3).jpg';
+import bmw520d_4 from '@/images/cars/520d/520d (4).jpg';
+import audiA6_1 from '@/images/cars/A6/a6 (1).jpg';
+import audiA6_2 from '@/images/cars/A6/a6 (2).jpg';
+import audiA6_3 from '@/images/cars/A6/a6 (3).jpg';
+import audiA6_4 from '@/images/cars/A6/a6 (4).jpg';
+import mercedesG63_1 from '@/images/cars/G63/g63- (1).jpg';
+import mercedesG63_2 from '@/images/cars/G63/g63- (2).jpg';
+import mercedesG63_3 from '@/images/cars/G63/g63- (3).jpg';
+import mercedesG63_4 from '@/images/cars/G63/g63- (4).jpg';
+import audiA1_1 from '@/images/cars/a1/a1 (1).jpg';
+import audiA1_2 from '@/images/cars/a1/a1 (2).jpg';
+import audiA1_3 from '@/images/cars/a1/a1 (3).jpg';
+import audiA1_4 from '@/images/cars/a1/a1 (4).jpg';
+import audiA3_1 from '@/images/cars/a3/a3 (1).jpg';
+import audiA3_2 from '@/images/cars/a3/a3 (2).jpg';
+import audiA3_3 from '@/images/cars/a3/a3 (3).jpg';
+import audiA3_4 from '@/images/cars/a3/a3 (4).jpg';
+import mercedesA35_1 from '@/images/cars/a35/a35 (1).jpg';
+import mercedesA35_2 from '@/images/cars/a35/a35 (2).jpg';
+import mercedesA35_3 from '@/images/cars/a35/a35 (3).jpg';
+import mercedesA35_4 from '@/images/cars/a35/a35 (4).jpg';
+import mercedesA45s_1 from '@/images/cars/a45s/a45s (1).jpg';
+import mercedesA45s_2 from '@/images/cars/a45s/a45s (2).jpg';
+import mercedesA45s_3 from '@/images/cars/a45s/a45s (3).jpg';
+import mercedesA45s_4 from '@/images/cars/a45s/a45s (4).jpg';
+import astonMartin_1 from '@/images/cars/aston martin/aqton-marrtin (1).jpg';
+import astonMartin_2 from '@/images/cars/aston martin/aqton-marrtin (2).jpg';
+import astonMartin_3 from '@/images/cars/aston martin/aqton-marrtin (3).jpg';
+import astonMartin_4 from '@/images/cars/aston martin/aqton-marrtin (4).jpg';
+import astonMartin_5 from '@/images/cars/aston martin/aqton-marrtin (5).jpg';
+import astonMartin_6 from '@/images/cars/aston martin/aqton-marrtin (6).jpg';
+import opelAstra_1 from '@/images/cars/astra/astra (1).jpg';
+import opelAstra_2 from '@/images/cars/astra/astra (2).jpg';
+import opelAstra_3 from '@/images/cars/astra/astra (3).jpg';
+import opelAstra_4 from '@/images/cars/astra/astra (4).jpg';
+import seatAteca_1 from '@/images/cars/ateca/ateca (1).jpg';
+import seatAteca_2 from '@/images/cars/ateca/ateca (2).jpg';
+import porscheBoxsterBlanc_1 from '@/images/cars/boxter blanc/boxtert-blanc (1).jpg';
+import porscheBoxsterBlanc_2 from '@/images/cars/boxter blanc/boxtert-blanc (2).jpg';
+import porscheBoxsterBlanc_3 from '@/images/cars/boxter blanc/boxtert-blanc (3).jpg';
+import porscheBoxsterBlanc_4 from '@/images/cars/boxter blanc/boxtert-blanc (4).jpg';
+import porscheBoxsterBleu_1 from '@/images/cars/boxter bleu/boxter-bleu (1).jpg';
+import porscheBoxsterBleu_2 from '@/images/cars/boxter bleu/boxter-bleu (2).jpg';
+import porscheBoxsterBleu_3 from '@/images/cars/boxter bleu/boxter-bleu (3).jpg';
+import porscheBoxsterBleu_4 from '@/images/cars/boxter bleu/boxter-bleu (4).jpg';
+import porscheBoxsterGris_1 from '@/images/cars/boxter gris/boxter (1).jpg';
+import porscheBoxsterGris_2 from '@/images/cars/boxter gris/boxter (2).jpg';
+
+import porscheBoxsterNoir_1 from '@/images/cars/boxter noir/boxter noir (1).jpg';
+import porscheBoxsterNoir_2 from '@/images/cars/boxter noir/boxter noir (2).jpg';
+import porscheBoxsterNoir_3 from '@/images/cars/boxter noir/boxter noir (3).jpg';
+import porscheBoxsterNoir_4 from '@/images/cars/boxter noir/boxter noir (4).jpg';
+import porscheBoxsterRouge_1 from '@/images/cars/boxter rouge/boxter red (1).jpg';
+import porscheBoxsterRouge_2 from '@/images/cars/boxter rouge/boxter red (2).jpg';
+import brabus_1 from '@/images/cars/brabus/brabus (1).jpg';
+import brabus_2 from '@/images/cars/brabus/brabus (2).jpg';
+import brabus_3 from '@/images/cars/brabus/brabus (3).jpg';
+import brabus_4 from '@/images/cars/brabus/brabus (4).jpg';
+import brabus_5 from '@/images/cars/brabus/brabus (5).jpg';
+import brabus_6 from '@/images/cars/brabus/brabus (6).jpg';
+import brabus_7 from '@/images/cars/brabus/brabus (7).jpg';
+import brabus_8 from '@/images/cars/brabus/brabus (8).jpg';
+import porscheCayenneTurbo_1 from '@/images/cars/cayenne turbo/cayenne (1).jpg';
+import mercedesCChrome_1 from '@/images/cars/class c chrome/class c chrome (1).jpg';
+import mercedesCGris_1 from '@/images/cars/class c gris/class-c1.jpg';
+import mercedesCNoir_1 from '@/images/cars/class c noir/class c noir (1).jpg';
+import mercedesEBleu_1 from '@/images/cars/class e bleu/class e (1).jpg';
+import mercedesEVert_1 from '@/images/cars/class e vert/class e vert (1).jpg';
+import renaultClio_1 from '@/images/cars/clio 5/clio  (1).jpg';
+import seatCupra_1 from '@/images/cars/cupra/cupra (1).jpg';
+import skodaFabia_1 from '@/images/cars/fabia/fabia (1).jpg';
+import fiat500_1 from '@/images/cars/fiat 500/fiat 500 (1).jpg';
+import fiat500X_1 from '@/images/cars/fiat 500x/500x (1).jpg';
+import fiatAbarth_1 from '@/images/cars/fiat abarth/abarth (1).jpg';
+import mercedesGLE_1 from '@/images/cars/gle/gle (1).jpg';
+import mercedesGLECare_1 from '@/images/cars/gle caré/gle-caré (1).jpg';
+import mercedesGLECareMaybach_1 from '@/images/cars/gle caré maybach/gle-caré (1).jpg';
+import mercedesGLE63s_1 from '@/images/cars/gle63s/gle36 (1).jpg';
+import volkswagenGolf7_1 from '@/images/cars/golf 7/golf7 (1).jpg';
+import volkswagenGolfR_1 from '@/images/cars/golf r/golf r (1).jpg';
+import volkswagenGTD_1 from '@/images/cars/gtd/gtd (1).jpg';
+import skodaKamiq_1 from '@/images/cars/kamiq/kamiq (1).jpg';
+import seatLeon_1 from '@/images/cars/leon/leon (1).jpg';
+import porscheMacanGTS_1 from '@/images/cars/macan gts/macan (1).jpg';
+import mercedesVan_1 from '@/images/cars/merc van/photo_5801107229313714371_y.jpg';
+import opelMokka_1 from '@/images/cars/moka/moka (1).jpg';
+import volkswagenPolo_1 from '@/images/cars/polo/polo (1).jpg';
+import audiQ3_1 from '@/images/cars/q3/q3 (1).jpg';
+import audiQ5_1 from '@/images/cars/q5/q5 (1).jpg';
+import audiQ8_1 from '@/images/cars/q8/photo_5801107229313714389_y.jpg';
+import rangeRoverEvoque_1 from '@/images/cars/range evoque/evoque (1).jpg';
+import rangeRoverSVR_1 from '@/images/cars/range svr/svr (1).jpg';
+import audiRS3_1 from '@/images/cars/rs3/rs3 (1).jpg';
+import audiRS6_1 from '@/images/cars/rs6/photo_5801107229313714596_y.jpg';
+import audiRSQ3_1 from '@/images/cars/rsq3/rsq3 (1).jpg';
+import volkswagenTaigo_1 from '@/images/cars/taigo/taigo (1).jpg';
+import volkswagenTiguanAncient_1 from '@/images/cars/tiguan ancient/tiguan1.jpg';
+import volkswagenTiguanNV_1 from '@/images/cars/tiguan nv/tiguan (1).jpg';
+import mercedesVanUtilitaire_1 from '@/images/cars/van/Van1.jpg';
+import skodaVRS_1 from '@/images/cars/vrs/vrs (1).jpg';
+import bmwX5_1 from '@/images/cars/x5/x5 (1).jpg';
+import bmwX7_1 from '@/images/cars/x7/x7 (1).jpg';
+
+export const cars: Car[] = [
+  {
+    id: '1',
+    name: 'Peugeot 308 II GT',
+    brand: 'Peugeot',
+    category: 'Berline',
+    price: 180,
+    image: peugeot308_1,
+    images: [peugeot308_1, peugeot308_2, peugeot308_3, peugeot308_4, peugeot308_5, peugeot308_6, peugeot308_7],
+    description: 'Berline française au design moderne et équipements technologiques avancés.',
+    technicalSpecs: {
+      engine: 'Essence 1.6L PureTech Turbo',
+      power: '130 ch',
+      acceleration: '0-100 km/h en 8.8s',
+      topSpeed: '210 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Climatisation automatique',
+      'Écran tactile 8" Peugeot i-Cockpit',
+      'Caméra de recul',
+      'Sièges en tissu Alcantara',
+      'Jantes alliage 17"',
+      'Feux LED',
+      'Apple CarPlay / Android Auto',
+      'Régulateur de vitesse'
+    ]
+  },
+
+  {
+    id: '2',
+    name: 'BMW 320d xDrive',
+    brand: 'BMW',
+    category: 'Berline',
+    price: 420,
+    image: bmw320d_1,
+    images: [bmw320d_1, bmw320d_2, bmw320d_3, bmw320d_4],
+    description: 'Berline premium BMW avec traction intégrale et performances diesel optimisées.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TwinPower Turbo',
+      power: '190 ch',
+      acceleration: '0-100 km/h en 7.1s',
+      topSpeed: '240 km/h',
+      transmission: 'Automatique Steptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '5.2L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'BMW iDrive avec écran 10.25"',
+      'Climatisation automatique 3 zones',
+      'Sièges sport en cuir Dakota',
+      'Jantes alliage style 790M 18"',
+      'Éclairage LED adaptatif',
+      'Caméra de recul avec PDC',
+      'BMW ConnectedDrive Services',
+      'Traction intégrale xDrive'
+    ]
+  },
+
+  {
+    id: '3',
+    name: 'BMW 420d Gran Coupé',
+    brand: 'BMW',
+    category: 'Coupé',
+    price: 480,
+    image: bmw420d_1,
+    images: [bmw420d_1, bmw420d_2, bmw420d_3, bmw420d_4],
+    description: 'Coupé 4 portes BMW au design élégant et performances efficientes.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TwinPower Turbo',
+      power: '190 ch',
+      acceleration: '0-100 km/h en 7.5s',
+      topSpeed: '235 km/h',
+      transmission: 'Automatique Steptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '5.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'BMW Live Cockpit Professional',
+      'Climatisation automatique',
+      'Sièges sport M en cuir Vernasca',
+      'Jantes M double bâtons 19"',
+      'Projecteurs LED adaptatifs',
+      'Système Hi-Fi Harman Kardon',
+      'Caméra de recul',
+      'BMW Gestuelle'
+    ]
+  },
+
+  {
+    id: '4',
+    name: 'BMW 520d Berline',
+    brand: 'BMW',
+    category: 'Berline',
+    price: 520,
+    image: bmw520d_1,
+    images: [bmw520d_1, bmw520d_2, bmw520d_3, bmw520d_4],
+    description: 'Berline exécutive BMW Série 5 avec confort et technologies de pointe.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TwinPower Turbo',
+      power: '190 ch',
+      acceleration: '0-100 km/h en 7.8s',
+      topSpeed: '235 km/h',
+      transmission: 'Automatique Steptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '5.0L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'BMW Operating System 7.0',
+      'Climatisation automatique 4 zones',
+      'Sièges confort chauffants en cuir',
+      'Jantes alliage style 662M 18"',
+      'BMW Laserlight',
+      'Caméra de recul + 360°',
+      'Système audio Harman Kardon',
+      'BMW Display Key'
+    ]
+  },
+
+  {
+    id: '5',
+    name: 'Audi A6 50 TDI quattro',
+    brand: 'Audi',
+    category: 'Berline',
+    price: 580,
+    image: audiA6_1,
+    images: [audiA6_1, audiA6_2, audiA6_3, audiA6_4],
+    description: 'Berline exécutive Audi A6 avec traction intégrale et confort premium.',
+    technicalSpecs: {
+      engine: 'Diesel 3.0L V6 TDI',
+      power: '286 ch',
+      acceleration: '0-100 km/h en 5.1s',
+      topSpeed: '250 km/h',
+      transmission: 'tiptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '6.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MMI navigation plus avec MMI touch',
+      'Climatisation automatique 4 zones',
+      'Audi Virtual Cockpit plus',
+      'Sièges sport en cuir Milano',
+      'Jantes 5 branches parallèles 19"',
+      'Matrix LED headlights',
+      'Caméra de recul',
+      'Système audio Bang & Olufsen'
+    ]
+  },
+
+  {
+    id: '6',
+    name: 'Mercedes-AMG G 63',
+    brand: 'Mercedes-AMG',
+    category: 'SUV',
+    price: 1500,
+    image: mercedesG63_1,
+    images: [mercedesG63_1, mercedesG63_2, mercedesG63_3, mercedesG63_4],
+    description: 'Légende tout-terrain Mercedes-AMG G 63 - icône de performance.',
+    technicalSpecs: {
+      engine: 'V8 4.0L AMG Biturbo',
+      power: '585 ch',
+      acceleration: '0-100 km/h en 4.5s',
+      topSpeed: '220 km/h',
+      transmission: 'AMG SPEEDSHIFT TCT 9G',
+      fuel: 'Essence',
+      consumption: '13.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans premium',
+      'Climatisation THERMOTRONIC automatique',
+      'AMG Performance 4MATIC',
+      'Sièges AMG Performance en cuir nappa',
+      'Jantes AMG forgées 22"',
+      'Suspension AMG RIDE CONTROL',
+      'Caméra 360° tout-terrain',
+      'Système audio Burmester 3D surround'
+    ]
+  },
+
+  {
+    id: '7',
+    name: 'Audi A1 Sportback 30 TFSI',
+    brand: 'Audi',
+    category: 'Citadine',
+    price: 200,
+    image: audiA1_1,
+    images: [audiA1_1, audiA1_2, audiA1_3, audiA1_4],
+    description: 'Citadine premium Audi au design sportif et équipements technologiques.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TFSI',
+      power: '110 ch',
+      acceleration: '0-100 km/h en 10.0s',
+      topSpeed: '194 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Audi Virtual Cockpit',
+      'Climatisation automatique',
+      'MMI radio plus',
+      'Sièges sport en tissu/simili cuir',
+      'Jantes alliage 16"',
+      'Feux LED',
+      'Audi smartphone interface',
+      'Caméra de recul'
+    ]
+  },
+
+  {
+    id: '8',
+    name: 'Audi A3 Sportback 35 TDI',
+    brand: 'Audi',
+    category: 'Berline',
+    price: 280,
+    image: audiA3_1,
+    images: [audiA3_1, audiA3_2, audiA3_3, audiA3_4],
+    description: 'Compacte premium Audi avec design moderne et technologies innovantes.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TDI',
+      power: '150 ch',
+      acceleration: '0-100 km/h en 8.2s',
+      topSpeed: '218 km/h',
+      transmission: 'S tronic 7 rapports',
+      fuel: 'Diesel',
+      consumption: '4.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MMI navigation plus',
+      'Climatisation automatique',
+      'Audi Virtual Cockpit plus',
+      'Sièges sport en tissu/cuir',
+      'Jantes design 17"',
+      'Projecteurs LED',
+      'Audi connect navigation',
+      'Système audio Audi Sound System'
+    ]
+  },
+
+  {
+    id: '9',
+    name: 'Mercedes-AMG A 35 4MATIC',
+    brand: 'Mercedes-AMG',
+    category: 'Sport',
+    price: 450,
+    image: mercedesA35_1,
+    images: [mercedesA35_1, mercedesA35_2, mercedesA35_3, mercedesA35_4],
+    description: 'Compacte sportive Mercedes-AMG A 35 avec traction intégrale et performances.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L AMG Turbo',
+      power: '306 ch',
+      acceleration: '0-100 km/h en 4.7s',
+      topSpeed: '250 km/h',
+      transmission: 'AMG SPEEDSHIFT DCT 7G',
+      fuel: 'Essence',
+      consumption: '7.3L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 10.25"',
+      'Climatisation THERMATIC',
+      'AMG Track Pace',
+      'Sièges sport AMG en ARTICO/microfibre',
+      'Jantes AMG 18" multibranches',
+      'Éclairage d\'ambiance AMG',
+      'Caméra de recul',
+      'Système audio Burmester surround'
+    ]
+  },
+
+  {
+    id: '10',
+    name: 'Mercedes-AMG A 45 S 4MATIC+',
+    brand: 'Mercedes-AMG',
+    category: 'Sport',
+    price: 620,
+    image: mercedesA45s_1,
+    images: [mercedesA45s_1, mercedesA45s_2, mercedesA45s_3, mercedesA45s_4],
+    description: 'Compacte ultra-performante Mercedes-AMG A 45 S - la plus puissante de sa catégorie.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L AMG Turbo',
+      power: '421 ch',
+      acceleration: '0-100 km/h en 3.9s',
+      topSpeed: '270 km/h',
+      transmission: 'AMG SPEEDSHIFT DCT 8G',
+      fuel: 'Essence',
+      consumption: '8.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec AMG Track Pace',
+      'Climatisation THERMATIC automatique',
+      'AMG Performance 4MATIC+',
+      'Sièges baquets AMG en cuir Nappa',
+      'Jantes AMG forgées 19"',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra de recul 360°',
+      'Système audio Burmester 3D surround'
+    ]
+  },
+
+  {
+    id: '11',
+    name: 'Aston Martin DB11 V8',
+    brand: 'Aston Martin',
+    category: 'Luxe',
+    price: 1800,
+    image: astonMartin_1,
+    images: [astonMartin_1, astonMartin_2, astonMartin_3, astonMartin_4],
+    description: 'Grand Tourisme britannique Aston Martin DB11 - élégance et performance.',
+    technicalSpecs: {
+      engine: 'V8 4.0L BiTurbo AMG',
+      power: '510 ch',
+      acceleration: '0-100 km/h en 4.0s',
+      topSpeed: '301 km/h',
+      transmission: 'Automatique ZF 8 rapports',
+      fuel: 'Essence',
+      consumption: '10.7L/100km',
+      seats: '4 places'
+    },
+    equipment: [
+      'Système d\'infodivertissement TMX',
+      'Climatisation automatique bi-zone',
+      'Navigation GPS intégrée',
+      'Sièges sport en cuir Oxford',
+      'Jantes 20" V-Spoke Silver',
+      'Phares LED adaptatifs',
+      'Caméra de recul',
+      'Système audio premium 400W'
+    ]
+  },
+
+  {
+    id: '12',
+    name: 'Opel Astra Sports Tourer',
+    brand: 'Opel',
+    category: 'Break',
+    price: 220,
+    image: opelAstra_1,
+    images: [opelAstra_1, opelAstra_2, opelAstra_3, opelAstra_4],
+    description: 'Break familial Opel Astra avec design moderne et habitabilité optimisée.',
+    technicalSpecs: {
+      engine: 'Essence 1.2L Turbo',
+      power: '130 ch',
+      acceleration: '0-100 km/h en 9.2s',
+      topSpeed: '205 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Multimedia Navi Pro',
+      'Climatisation automatique',
+      'IntelliLink avec écran 7"',
+      'Sièges ergonomiques AGR',
+      'Jantes alliage 17"',
+      'Phares AFL LED adaptatifs',
+      'Caméra de recul',
+      'Apple CarPlay / Android Auto'
+    ]
+  },
+
+  {
+    id: '13',
+    name: 'SEAT Ateca 1.5 TSI',
+    brand: 'SEAT',
+    category: 'SUV',
+    price: 240,
+    image: seatAteca_1,
+    images: [seatAteca_1, seatAteca_2],
+    description: 'SUV compact SEAT Ateca avec design moderne et équipements connectés.',
+    technicalSpecs: {
+      engine: 'Essence 1.5L TSI',
+      power: '150 ch',
+      acceleration: '0-100 km/h en 8.4s',
+      topSpeed: '202 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '6.2L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'SEAT Media System Plus 8"',
+      'Climatisation automatique',
+      'SEAT Connect',
+      'Sièges en tissu design',
+      'Jantes alliage 17"',
+      'Full Link',
+      'Caméra de recul',
+      'Régulateur de vitesse adaptatif'
+    ]
+  },
+
+  {
+    id: '14',
+    name: 'Porsche 718 Boxster (Blanc)',
+    brand: 'Porsche',
+    category: 'Cabriolet',
+    price: 750,
+    image: porscheBoxsterBlanc_1,
+    images: [porscheBoxsterBlanc_1, porscheBoxsterBlanc_2, porscheBoxsterBlanc_3, porscheBoxsterBlanc_4],
+    description: 'Roadster Porsche 718 Boxster en blanc pur - élégance à ciel ouvert.',
+    technicalSpecs: {
+      engine: 'H4 2.0L Turbo',
+      power: '300 ch',
+      acceleration: '0-100 km/h en 5.1s',
+      topSpeed: '275 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '7.4L/100km',
+      seats: '2 places'
+    },
+    equipment: [
+      'PCM avec Porsche Connect',
+      'Climatisation automatique',
+      'Porsche Communication Management',
+      'Sièges sport adaptatifs',
+      'Jantes 18/19" Boxster',
+      'Phares LED avec PDLS',
+      'Capote électrique',
+      'Régulateur de vitesse adaptatif'
+    ]
+  },
+
+  {
+    id: '15',
+    name: 'Porsche 718 Boxster (Bleu)',
+    brand: 'Porsche',
+    category: 'Cabriolet',
+    price: 800,
+    image: porscheBoxsterBleu_1,
+    images: [porscheBoxsterBleu_1, porscheBoxsterBleu_2, porscheBoxsterBleu_3, porscheBoxsterBleu_4],
+    description: 'Roadster Porsche 718 Boxster en bleu saphir - passion et performance.',
+    technicalSpecs: {
+      engine: 'H4 2.5L Turbo',
+      power: '350 ch',
+      acceleration: '0-100 km/h en 4.4s',
+      topSpeed: '285 km/h',
+      transmission: 'PDK automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '8.1L/100km',
+      seats: '2 places'
+    },
+    equipment: [
+      'PCM avec navigation',
+      'Climatisation automatique',
+      'Porsche Active Suspension Management',
+      'Sièges sport adaptatifs Plus',
+      'Jantes 19/20" Boxster S',
+      'Phares LED avec PDLS+',
+      'Système audio BOSE surround',
+      'Sport Chrono Package'
+    ]
+  },
+
+  {
+    id: '16',
+    name: 'Porsche 718 Boxster (Gris)',
+    brand: 'Porsche',
+    category: 'Cabriolet',
+    price: 770,
+    image: porscheBoxsterGris_1,
+    images: [porscheBoxsterGris_1, porscheBoxsterGris_2],
+    description: 'Roadster Porsche 718 Boxster en gris métallisé - sobriété sportive.',
+    technicalSpecs: {
+      engine: 'H4 2.5L Turbo',
+      power: '350 ch',
+      acceleration: '0-100 km/h en 4.4s',
+      topSpeed: '285 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '7.8L/100km',
+      seats: '2 places'
+    },
+    equipment: [
+      'PCM avec Porsche Connect',
+      'Climatisation automatique',
+      'Porsche Stability Management',
+      'Sièges sport adaptatifs',
+      'Jantes 18/19" Boxster',
+      'Phares LED avec PDLS',
+      'Système audio premium',
+      'Capote électrique grise'
+    ]
+  },
+
+  {
+    id: '17',
+    name: 'Porsche 718 Boxster (Noir)',
+    brand: 'Porsche',
+    category: 'Cabriolet',
+    price: 780,
+    image: porscheBoxsterNoir_1,
+    images: [porscheBoxsterNoir_1, porscheBoxsterNoir_2, porscheBoxsterNoir_3, porscheBoxsterNoir_4],
+    description: 'Roadster Porsche 718 Boxster en noir jet - élégance intemporelle.',
+    technicalSpecs: {
+      engine: 'H4 2.5L Turbo',
+      power: '350 ch',
+      acceleration: '0-100 km/h en 4.4s',
+      topSpeed: '285 km/h',
+      transmission: 'PDK automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '8.1L/100km',
+      seats: '2 places'
+    },
+    equipment: [
+      'PCM avec navigation',
+      'Climatisation automatique',
+      'Porsche Active Suspension Management',
+      'Sièges sport adaptatifs Plus',
+      'Jantes 19/20" Boxster S noires',
+      'Phares LED avec PDLS+',
+      'Système audio BOSE surround',
+      'Sport Chrono Package'
+    ]
+  },
+
+  {
+    id: '18',
+    name: 'Porsche 718 Boxster (Rouge)',
+    brand: 'Porsche',
+    category: 'Cabriolet',
+    price: 790,
+    image: porscheBoxsterRouge_1,
+    images: [porscheBoxsterRouge_1, porscheBoxsterRouge_2],
+    description: 'Roadster Porsche 718 Boxster en rouge Guards - passion à l\'état pur.',
+    technicalSpecs: {
+      engine: 'H4 2.5L Turbo',
+      power: '350 ch',
+      acceleration: '0-100 km/h en 4.4s',
+      topSpeed: '285 km/h',
+      transmission: 'PDK automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '8.1L/100km',
+      seats: '2 places'
+    },
+    equipment: [
+      'PCM avec navigation',
+      'Climatisation automatique',
+      'Porsche Active Suspension Management',
+      'Sièges sport adaptatifs Plus',
+      'Jantes 19/20" Boxster S',
+      'Phares LED avec PDLS+',
+      'Système audio BOSE surround',
+      'Sport Chrono Package'
+    ]
+  },
+
+  {
+    id: '19',
+    name: 'Brabus G 800 Widestar',
+    brand: 'Brabus',
+    category: 'Luxe',
+    price: 2200,
+    image: brabus_1,
+    images: [brabus_1, brabus_2, brabus_3, brabus_4, brabus_5, brabus_6, brabus_7, brabus_8],
+    description: 'SUV ultra-exclusif Brabus G 800 Widestar - summum de la personnalisation.',
+    technicalSpecs: {
+      engine: 'V8 4.0L Biturbo Brabus',
+      power: '800 ch',
+      acceleration: '0-100 km/h en 4.1s',
+      topSpeed: '240 km/h',
+      transmission: 'AMG SPEEDSHIFT TCT 9G',
+      fuel: 'Essence',
+      consumption: '14.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Brabus Cockpit avec écrans premium',
+      'Climatisation haute performance',
+      'Aménagement intérieur Brabus',
+      'Sièges Brabus en cuir Mastik',
+      'Jantes Brabus forgées 23"',
+      'Kit carrosserie Widestar',
+      'Échappement Brabus signature',
+      'Système audio Burmester 3D Premium'
+    ]
+  },
+
+  {
+    id: '20',
+    name: 'Porsche Cayenne Turbo',
+    brand: 'Porsche',
+    category: 'SUV',
+    price: 1200,
+    image: porscheCayenneTurbo_1,
+    images: [porscheCayenneTurbo_1],
+    description: 'SUV Porsche Cayenne Turbo - summum de la performance et du luxe.',
+    technicalSpecs: {
+      engine: 'V8 4.0L Biturbo',
+      power: '550 ch',
+      acceleration: '0-100 km/h en 3.9s',
+      topSpeed: '286 km/h',
+      transmission: 'Tiptronic S 8 rapports',
+      fuel: 'Essence',
+      consumption: '11.5L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'PCM 6.0 avec navigation Connect Plus',
+      'Climatisation automatique 4 zones',
+      'Porsche Advanced Cockpit',
+      'Sièges sport adaptatifs Plus 18 voies',
+      'Jantes Cayenne Turbo 21"',
+      'Suspension pneumatique adaptive PASM',
+      'Caméra surround view',
+      'Système audio Burmester 3D High-End'
+    ]
+  },
+
+  {
+    id: '21',
+    name: 'Mercedes-Benz Classe C Chrome',
+    brand: 'Mercedes-Benz',
+    category: 'Berline',
+    price: 380,
+    image: mercedesCChrome_1,
+    images: [mercedesCChrome_1],
+    description: 'Mercedes-Benz Classe C avec finition chrome exclusive et équipements premium.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L Turbo',
+      power: '204 ch',
+      acceleration: '0-100 km/h en 7.1s',
+      topSpeed: '240 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Essence',
+      consumption: '6.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 11.9" et 12.3"',
+      'Climatisation THERMOTRONIC',
+      'Pack Chrome extérieur',
+      'Sièges sport en cuir Nappa',
+      'Jantes AMG 18" multibranches',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra de recul 360°',
+      'Système audio Burmester surround'
+    ]
+  },
+
+  {
+    id: '22',
+    name: 'Mercedes-Benz Classe C (Gris)',
+    brand: 'Mercedes-Benz',
+    category: 'Berline',
+    price: 350,
+    image: mercedesCGris_1,
+    images: [mercedesCGris_1],
+    description: 'Mercedes-Benz Classe C en gris météorite - élégance et raffinement.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L',
+      power: '194 ch',
+      acceleration: '0-100 km/h en 7.3s',
+      topSpeed: '240 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Diesel',
+      consumption: '5.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écran tactile 10.25"',
+      'Climatisation THERMATIC',
+      'Mercedes me connect',
+      'Sièges en similicuir ARTICO',
+      'Jantes alliage 17"',
+      'LED High Performance',
+      'Caméra de recul',
+      'Système de navigation'
+    ]
+  },
+
+  {
+    id: '23',
+    name: 'Mercedes-Benz Classe C (Noir)',
+    brand: 'Mercedes-Benz',
+    category: 'Berline',
+    price: 360,
+    image: mercedesCNoir_1,
+    images: [mercedesCNoir_1],
+    description: 'Mercedes-Benz Classe C en noir obsidien - sobriété et raffinement.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L',
+      power: '194 ch',
+      acceleration: '0-100 km/h en 7.3s',
+      topSpeed: '240 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Diesel',
+      consumption: '5.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écran tactile 10.25"',
+      'Climatisation THERMATIC',
+      'Pack Night extérieur',
+      'Sièges en cuir noir',
+      'Jantes AMG 18" noir mat',
+      'LED High Performance',
+      'Caméra de recul',
+      'Système audio premium'
+    ]
+  },
+
+  {
+    id: '24',
+    name: 'Mercedes-Benz Classe E (Bleu)',
+    brand: 'Mercedes-Benz',
+    category: 'Berline',
+    price: 480,
+    image: mercedesEBleu_1,
+    images: [mercedesEBleu_1],
+    description: 'Mercedes-Benz Classe E en bleu cavansite - sophistication et innovation.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L',
+      power: '194 ch',
+      acceleration: '0-100 km/h en 7.7s',
+      topSpeed: '240 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Diesel',
+      consumption: '5.3L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 12.3"',
+      'Climatisation THERMOTRONIC 3 zones',
+      'Intelligent Drive semi-autonome',
+      'Sièges confort multicontours',
+      'Jantes 18" 5 doubles bâtons',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra de recul avec guidage',
+      'Système audio Burmester surround'
+    ]
+  },
+
+  {
+    id: '25',
+    name: 'Mercedes-Benz Classe E (Vert)',
+    brand: 'Mercedes-Benz',
+    category: 'Berline',
+    price: 490,
+    image: mercedesEVert_1,
+    images: [mercedesEVert_1],
+    description: 'Mercedes-Benz Classe E en vert émeraude - exclusivité et distinction.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L Turbo',
+      power: '258 ch',
+      acceleration: '0-100 km/h en 6.6s',
+      topSpeed: '250 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Essence',
+      consumption: '7.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 12.3"',
+      'Climatisation THERMOTRONIC 4 zones',
+      'Pack AMG Line extérieur',
+      'Sièges sport multicontours',
+      'Jantes AMG 19" multibranches',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra 360° avec Park Pilot',
+      'Système audio Burmester 3D'
+    ]
+  },
+
+  {
+    id: '26',
+    name: 'Renault Clio 1.0 TCe',
+    brand: 'Renault',
+    category: 'Citadine',
+    price: 180,
+    image: renaultClio_1,
+    images: [renaultClio_1],
+    description: 'Citadine Renault Clio - modernité française et efficacité urbaine.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TCe',
+      power: '100 ch',
+      acceleration: '0-100 km/h en 11.2s',
+      topSpeed: '180 km/h',
+      transmission: 'Manuelle 5 rapports',
+      fuel: 'Essence',
+      consumption: '5.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Système R&Go avec écran 7"',
+      'Climatisation manuelle',
+      'Easy Connect Services',
+      'Sièges en tissu',
+      'Jantes alliage 16"',
+      'Éclairage LED DRL',
+      'Android Auto / Apple CarPlay',
+      'Régulateur-limiteur de vitesse'
+    ]
+  },
+
+  {
+    id: '27',
+    name: 'SEAT Leon Cupra 2.0 TSI',
+    brand: 'SEAT',
+    category: 'Sport',
+    price: 380,
+    image: seatCupra_1,
+    images: [seatCupra_1],
+    description: 'Compacte sportive SEAT Leon Cupra - performance et agilité exceptionnelles.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L TSI',
+      power: '300 ch',
+      acceleration: '0-100 km/h en 5.7s',
+      topSpeed: '250 km/h',
+      transmission: 'DSG automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '7.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Cupra Connect 10"',
+      'Climatisation automatique tri-zone',
+      'Digital Cockpit 10.25"',
+      'Sièges baquets Cupra en Alcantara',
+      'Jantes Cupra Performance 19"',
+      'Suspension DCC adaptative',
+      'Caméra de recul 360°',
+      'Système audio Beats Premium'
+    ]
+  },
+
+  {
+    id: '28',
+    name: 'Škoda Fabia 1.0 TSI',
+    brand: 'Škoda',
+    category: 'Citadine',
+    price: 170,
+    image: skodaFabia_1,
+    images: [skodaFabia_1],
+    description: 'Citadine Škoda Fabia - praticité tchèque et efficacité énergétique.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TSI',
+      power: '95 ch',
+      acceleration: '0-100 km/h en 10.8s',
+      topSpeed: '186 km/h',
+      transmission: 'Manuelle 5 rapports',
+      fuel: 'Essence',
+      consumption: '5.0L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Škoda Bolero avec écran 6.5"',
+      'Climatisation manuelle',
+      'SmartLink+',
+      'Sièges en tissu',
+      'Jantes acier 15"',
+      'Éclairage halogène',
+      'Volant multifonction',
+      'Ordinateur de bord'
+    ]
+  },
+
+  {
+    id: '29',
+    name: 'Fiat 500 1.0 Hybrid',
+    brand: 'Fiat',
+    category: 'Citadine',
+    price: 160,
+    image: fiat500_1,
+    images: [fiat500_1],
+    description: 'Citadine iconique Fiat 500 Hybrid - style italien et technologie moderne.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L Hybrid',
+      power: '70 ch',
+      acceleration: '0-100 km/h en 12.9s',
+      topSpeed: '160 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '4.1L/100km',
+      seats: '4 places'
+    },
+    equipment: [
+      'Uconnect avec écran 7"',
+      'Climatisation automatique',
+      'Tech Pack avec services connectés',
+      'Sièges en tissu',
+      'Jantes alliage 15"',
+      'Feux LED DRL',
+      'Apple CarPlay / Android Auto',
+      'Système audio premium'
+    ]
+  },
+
+  {
+    id: '30',
+    name: 'Fiat 500X Cross',
+    brand: 'Fiat',
+    category: 'SUV',
+    price: 230,
+    image: fiat500X_1,
+    images: [fiat500X_1],
+    description: 'SUV compact Fiat 500X Cross - caractère aventurier et style distinctif.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L Turbo',
+      power: '120 ch',
+      acceleration: '0-100 km/h en 10.9s',
+      topSpeed: '186 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.9L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Uconnect avec navigation 8.4"',
+      'Climatisation automatique',
+      'Cross Pack avec protections',
+      'Sièges en tissu techno',
+      'Jantes alliage 17"',
+      'Xenon headlights',
+      'Caméra de recul',
+      'Système audio Beats'
+    ]
+  },
+
+  {
+    id: '31',
+    name: 'Fiat Abarth 595 Competizione',
+    brand: 'Abarth',
+    category: 'Sport',
+    price: 280,
+    image: fiatAbarth_1,
+    images: [fiatAbarth_1],
+    description: 'Citadine sportive Abarth 595 Competizione - passion italienne et performances.',
+    technicalSpecs: {
+      engine: 'Essence 1.4L T-Jet',
+      power: '180 ch',
+      acceleration: '0-100 km/h en 6.7s',
+      topSpeed: '218 km/h',
+      transmission: 'Manuelle 5 rapports',
+      fuel: 'Essence',
+      consumption: '6.8L/100km',
+      seats: '4 places'
+    },
+    equipment: [
+      'Uconnect avec écran 7"',
+      'Climatisation automatique',
+      'Pack Performance Abarth',
+      'Sièges Sabelt sport',
+      'Jantes Abarth 17"',
+      'Xenon headlights',
+      'Échappement Record Monza',
+      'Système audio Beats premium'
+    ]
+  },
+
+  {
+    id: '32',
+    name: 'Mercedes-Benz GLE 450 4MATIC',
+    brand: 'Mercedes-Benz',
+    category: 'SUV',
+    price: 720,
+    image: mercedesGLE_1,
+    images: [mercedesGLE_1],
+    description: 'SUV Mercedes-Benz GLE 450 avec traction intégrale et confort premium.',
+    technicalSpecs: {
+      engine: 'Essence 3.0L + EQBoost',
+      power: '367 ch',
+      acceleration: '0-100 km/h en 5.7s',
+      topSpeed: '250 km/h',
+      transmission: 'Automatique 9G-TRONIC',
+      fuel: 'Essence',
+      consumption: '9.0L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 12.3"',
+      'Climatisation THERMOTRONIC 3 zones',
+      'E-ACTIVE BODY CONTROL',
+      'Sièges confort climatisés',
+      'Jantes AMG 20" multibranches',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra 360° avec assistance',
+      'Système audio Burmester surround'
+    ]
+  },
+
+  {
+    id: '33',
+    name: 'Mercedes GLE 400d Coupé',
+    brand: 'Mercedes-Benz',
+    category: 'SUV',
+    price: 780,
+    image: mercedesGLECare_1,
+    images: [mercedesGLECare_1],
+    description: 'SUV coupé Mercedes GLE 400d - design élégant et performance diesel.',
+    technicalSpecs: {
+      engine: 'Diesel 3.0L V6',
+      power: '330 ch',
+      acceleration: '0-100 km/h en 5.7s',
+      topSpeed: '250 km/h',
+      transmission: '9G-TRONIC automatique',
+      fuel: 'Diesel',
+      consumption: '7.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec écrans 12.3"',
+      'Climatisation THERMOTRONIC 3 zones',
+      'Suspension pneumatique AIRMATIC',
+      'Sièges confort en cuir',
+      'Jantes AMG 21" multibranches',
+      'Projecteurs MULTIBEAM LED',
+      'Caméra 360° avec assistance parking',
+      'Système audio surround Burmester'
+    ]
+  },
+
+  {
+    id: '34',
+    name: 'Mercedes GLE Coupé Maybach',
+    brand: 'Mercedes-Maybach',
+    category: 'Luxe',
+    price: 1200,
+    image: mercedesGLECareMaybach_1,
+    images: [mercedesGLECareMaybach_1],
+    description: 'SUV coupé Mercedes-Maybach GLE - summum du luxe et de l\'exclusivité.',
+    technicalSpecs: {
+      engine: 'V8 4.0L Biturbo',
+      power: '550 ch',
+      acceleration: '0-100 km/h en 4.9s',
+      topSpeed: '250 km/h',
+      transmission: 'AMG SPEEDSHIFT TCT 9G',
+      fuel: 'Essence',
+      consumption: '11.8L/100km',
+      seats: '4 places'
+    },
+    equipment: [
+      'MBUX Maybach avec écrans premium',
+      'Climatisation THERMOTRONIC 4 zones',
+      'First-Class Rear avec massage',
+      'Sièges Maybach en cuir Nappa exclusif',
+      'Jantes Maybach forgées 22"',
+      'E-ACTIVE BODY CONTROL',
+      'Caméra 360° avec Park Pilot',
+      'Système audio Burmester 4D surround'
+    ]
+  },
+
+  {
+    id: '35',
+    name: 'Mercedes-AMG GLE 63 S',
+    brand: 'Mercedes-AMG',
+    category: 'SUV',
+    price: 1200,
+    image: mercedesGLE63s_1,
+    images: [mercedesGLE63s_1],
+    description: 'SUV ultra-performant Mercedes-AMG GLE 63 S - puissance maximale.',
+    technicalSpecs: {
+      engine: 'V8 4.0L AMG Biturbo',
+      power: '612 ch',
+      acceleration: '0-100 km/h en 3.8s',
+      topSpeed: '280 km/h',
+      transmission: 'AMG SPEEDSHIFT TCT 9G',
+      fuel: 'Essence',
+      consumption: '12.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MBUX avec AMG Track Pace',
+      'Climatisation THERMOTRONIC automatique',
+      'AMG Performance 4MATIC+',
+      'Sièges Performance AMG en cuir Nappa',
+      'Jantes AMG forgées 22"',
+      'Suspension AMG RIDE CONTROL+',
+      'Caméra 360° avec assistance',
+      'Système audio Burmester 3D Premium'
+    ]
+  },
+
+  {
+    id: '36',
+    name: 'Volkswagen Golf VII 1.4 TSI',
+    brand: 'Volkswagen',
+    category: 'Berline',
+    price: 250,
+    image: volkswagenGolf7_1,
+    images: [volkswagenGolf7_1],
+    description: 'Compacte Volkswagen Golf VII - référence de la catégorie.',
+    technicalSpecs: {
+      engine: 'Essence 1.4L TSI',
+      power: '125 ch',
+      acceleration: '0-100 km/h en 9.2s',
+      topSpeed: '200 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Discover Media avec navigation',
+      'Climatisation automatique Climatronic',
+      'Digital Cockpit Pro',
+      'Sièges confort en tissu',
+      'Jantes alliage 16"',
+      'Éclairage LED',
+      'App-Connect Wireless',
+      'Parking Pilot'
+    ]
+  },
+
+  {
+    id: '37',
+    name: 'Volkswagen Golf R',
+    brand: 'Volkswagen',
+    category: 'Sport',
+    price: 520,
+    image: volkswagenGolfR_1,
+    images: [volkswagenGolfR_1],
+    description: 'Compacte sportive Volkswagen Golf R - performance et traction intégrale.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L TSI',
+      power: '320 ch',
+      acceleration: '0-100 km/h en 4.7s',
+      topSpeed: '250 km/h',
+      transmission: 'DSG automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '7.9L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Discover Pro avec navigation',
+      'Climatisation automatique 3 zones',
+      'Digital Cockpit Pro R',
+      'Sièges sport R en cuir/Alcantara',
+      'Jantes Pretoria R 19"',
+      'IQ.LIGHT LED Matrix',
+      'R Performance Pack',
+      'Système audio Harman Kardon'
+    ]
+  },
+
+  {
+    id: '38',
+    name: 'Volkswagen Golf GTD',
+    brand: 'Volkswagen',
+    category: 'Sport',
+    price: 380,
+    image: volkswagenGTD_1,
+    images: [volkswagenGTD_1],
+    description: 'Compacte sportive diesel Volkswagen Golf GTD - performance et efficience.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TDI',
+      power: '200 ch',
+      acceleration: '0-100 km/h en 7.1s',
+      topSpeed: '230 km/h',
+      transmission: 'DSG automatique 7 rapports',
+      fuel: 'Diesel',
+      consumption: '5.2L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Discover Pro avec navigation',
+      'Climatisation automatique 3 zones',
+      'Digital Cockpit Pro',
+      'Sièges sport GTD en Alcantara',
+      'Jantes Belvedere GTD 17"',
+      'IQ.LIGHT LED',
+      'DCC adaptive chassis control',
+      'Système audio Beats'
+    ]
+  },
+
+  {
+    id: '39',
+    name: 'Škoda Kamiq 1.0 TSI',
+    brand: 'Škoda',
+    category: 'SUV',
+    price: 210,
+    image: skodaKamiq_1,
+    images: [skodaKamiq_1],
+    description: 'SUV urbain Škoda Kamiq - design moderne et solutions ingénieuses.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TSI',
+      power: '110 ch',
+      acceleration: '0-100 km/h en 10.4s',
+      topSpeed: '190 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.5L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Škoda Amundsen avec navigation',
+      'Climatisation automatique',
+      'Virtual Cockpit',
+      'Sièges confort en tissu',
+      'Jantes alliage 17"',
+      'Full LED',
+      'SmartLink+ Wireless',
+      'Travel Assist'
+    ]
+  },
+
+  {
+    id: '40',
+    name: 'SEAT Leon 1.5 TSI',
+    brand: 'SEAT',
+    category: 'Berline',
+    price: 210,
+    image: seatLeon_1,
+    images: [seatLeon_1],
+    description: 'Compacte SEAT Leon au design dynamique et technologie avancée.',
+    technicalSpecs: {
+      engine: 'Essence 1.5L TSI',
+      power: '130 ch',
+      acceleration: '0-100 km/h en 8.9s',
+      topSpeed: '200 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.7L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'SEAT Media System 8.25"',
+      'Climatisation automatique',
+      'Digital Cockpit 8.25"',
+      'Sièges confort en tissu',
+      'Jantes alliage 16"',
+      'Phares LED',
+      'Wireless charger',
+      'SEAT Connect'
+    ]
+  },
+
+  {
+    id: '41',
+    name: 'Porsche Macan GTS',
+    brand: 'Porsche',
+    category: 'SUV',
+    price: 680,
+    image: porscheMacanGTS_1,
+    images: [porscheMacanGTS_1],
+    description: 'SUV compact Porsche Macan GTS - essence sportive dans un format polyvalent.',
+    technicalSpecs: {
+      engine: 'V6 2.9L Biturbo',
+      power: '380 ch',
+      acceleration: '0-100 km/h en 5.0s',
+      topSpeed: '261 km/h',
+      transmission: 'PDK automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '9.2L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'PCM 6.0 avec navigation',
+      'Climatisation automatique 3 zones',
+      'Porsche Advanced Cockpit',
+      'Sièges sport adaptatifs Plus',
+      'Jantes RS Spyder Design 20"',
+      'Suspension sportive PASM',
+      'Caméra de recul',
+      'Système audio BOSE surround'
+    ]
+  },
+
+  {
+    id: '42',
+    name: 'Mercedes-Benz Sprinter VIP',
+    brand: 'Mercedes-Benz',
+    category: 'Utilitaire',
+    price: 420,
+    image: mercedesVan_1,
+    images: [mercedesVan_1],
+    description: 'Utilitaire Mercedes-Benz Sprinter aménagé VIP pour transport de groupe.',
+    technicalSpecs: {
+      engine: 'Diesel 2.1L CDI',
+      power: '163 ch',
+      acceleration: '0-100 km/h en 11.5s',
+      topSpeed: '180 km/h',
+      transmission: 'Automatique 7G-TRONIC PLUS',
+      fuel: 'Diesel',
+      consumption: '8.7L/100km',
+      seats: '8-9 places'
+    },
+    equipment: [
+      'MBUX avec navigation',
+      'Climatisation automatique cabine',
+      'Aménagement VIP salon',
+      'Sièges cuir inclinables',
+      'Tablettes individuelles',
+      'Éclairage LED d\'ambiance',
+      'Système audio surround',
+      'Prises USB individuelles'
+    ]
+  },
+
+  {
+    id: '43',
+    name: 'Opel Mokka-e Électrique',
+    brand: 'Opel',
+    category: 'SUV',
+    price: 320,
+    image: opelMokka_1,
+    images: [opelMokka_1],
+    description: 'SUV électrique Opel Mokka-e au design audacieux et zéro émission.',
+    technicalSpecs: {
+      engine: 'Moteur électrique',
+      power: '136 ch',
+      acceleration: '0-100 km/h en 9.2s',
+      topSpeed: '150 km/h',
+      transmission: 'Boîte de vitesses à réduction',
+      fuel: 'Électrique',
+      consumption: '17.4 kWh/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Multimedia Navi Pro',
+      'Climatisation automatique',
+      'Pure Panel avec écrans 12" et 10"',
+      'Sièges chauffants en tissu',
+      'Jantes alliage diamantées 17"',
+      'Phares Intellilux LED Matrix',
+      'Caméra de recul 180°',
+      'Recharge rapide 100 kW'
+    ]
+  },
+
+  {
+    id: '44',
+    name: 'Volkswagen Polo 1.0 TSI',
+    brand: 'Volkswagen',
+    category: 'Citadine',
+    price: 190,
+    image: volkswagenPolo_1,
+    images: [volkswagenPolo_1],
+    description: 'Citadine Volkswagen Polo avec moteur TSI efficient et design moderne.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TSI',
+      power: '95 ch',
+      acceleration: '0-100 km/h en 10.8s',
+      topSpeed: '187 km/h',
+      transmission: 'Manuelle 5 rapports',
+      fuel: 'Essence',
+      consumption: '4.9L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Composition Media avec écran 6.5"',
+      'Climatisation manuelle',
+      'App-Connect',
+      'Sièges en tissu Titanblack',
+      'Jantes alliage 15"',
+      'Phares halogènes',
+      'Volant multifonction',
+      'Régulateur de vitesse'
+    ]
+  },
+
+  {
+    id: '45',
+    name: 'Audi Q3 35 TDI S line',
+    brand: 'Audi',
+    category: 'SUV',
+    price: 380,
+    image: audiQ3_1,
+    images: [audiQ3_1],
+    description: 'SUV compact Audi Q3 avec finition S line et équipements sportifs.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TDI',
+      power: '150 ch',
+      acceleration: '0-100 km/h en 9.2s',
+      topSpeed: '203 km/h',
+      transmission: 'S tronic 7 rapports',
+      fuel: 'Diesel',
+      consumption: '5.9L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MMI navigation plus',
+      'Climatisation automatique 3 zones',
+      'Audi Virtual Cockpit',
+      'Sièges sport S line en cuir/Alcantara',
+      'Jantes S line 19"',
+      'Phares LED avec signature',
+      'Caméra de recul avec guidage',
+      'Système audio Audi Sound System'
+    ]
+  },
+
+  {
+    id: '46',
+    name: 'Audi Q5 40 TDI quattro S line',
+    brand: 'Audi',
+    category: 'SUV',
+    price: 520,
+    image: audiQ5_1,
+    images: [audiQ5_1],
+    description: 'SUV premium Audi Q5 avec traction intégrale et équipements S line.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TDI',
+      power: '204 ch',
+      acceleration: '0-100 km/h en 7.6s',
+      topSpeed: '227 km/h',
+      transmission: 'S tronic 7 rapports',
+      fuel: 'Diesel',
+      consumption: '6.3L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MMI navigation plus avec MMI touch',
+      'Climatisation automatique 3 zones',
+      'Audi Virtual Cockpit plus',
+      'Sièges sport S line en cuir',
+      'Jantes 5 branches en Y 20"',
+      'Matrix LED headlights',
+      'Caméra de recul',
+      'Système audio premium'
+    ]
+  },
+
+  {
+    id: '47',
+    name: 'Audi Q8 50 TDI quattro',
+    brand: 'Audi',
+    category: 'SUV',
+    price: 750,
+    image: audiQ8_1,
+    images: [audiQ8_1],
+    description: 'SUV coupé premium Audi Q8 - design avant-gardiste et technologie de pointe.',
+    technicalSpecs: {
+      engine: 'Diesel 3.0L V6 TDI',
+      power: '286 ch',
+      acceleration: '0-100 km/h en 6.3s',
+      topSpeed: '240 km/h',
+      transmission: 'tiptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '7.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'MMI navigation plus avec dual touchscreen',
+      'Climatisation automatique 4 zones',
+      'Audi Virtual Cockpit plus',
+      'Sièges confort en cuir Valcona',
+      'Jantes 5 doubles branches 21"',
+      'Matrix LED headlights HD',
+      'Caméras 360° avec Audi parking pilot',
+      'Système audio Bang & Olufsen 3D'
+    ]
+  },
+
+  {
+    id: '48',
+    name: 'Range Rover Evoque P250',
+    brand: 'Land Rover',
+    category: 'SUV',
+    price: 580,
+    image: rangeRoverEvoque_1,
+    images: [rangeRoverEvoque_1],
+    description: 'SUV premium Range Rover Evoque - design avant-gardiste et luxe britannique.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L Turbo',
+      power: '249 ch',
+      acceleration: '0-100 km/h en 7.0s',
+      topSpeed: '230 km/h',
+      transmission: 'Automatique 9 rapports',
+      fuel: 'Essence',
+      consumption: '8.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Pivi Pro avec écran 10"',
+      'Climatisation automatique 2 zones',
+      'Terrain Response 2',
+      'Sièges Windsor en cuir',
+      'Jantes 19" 5 doubles bâtons',
+      'LED signature headlights',
+      'ClearSight rear-view mirror',
+      'Système audio Meridian'
+    ]
+  },
+
+  {
+    id: '49',
+    name: 'Range Rover Sport SVR',
+    brand: 'Land Rover',
+    category: 'SUV',
+    price: 1200,
+    image: rangeRoverSVR_1,
+    images: [rangeRoverSVR_1],
+    description: 'SUV ultra-performant Range Rover Sport SVR - puissance et capacités tout-terrain.',
+    technicalSpecs: {
+      engine: 'V8 5.0L Supercharged',
+      power: '575 ch',
+      acceleration: '0-100 km/h en 4.5s',
+      topSpeed: '283 km/h',
+      transmission: 'Automatique ZF 8 rapports',
+      fuel: 'Essence',
+      consumption: '13.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Touch Pro Duo avec écrans 10"',
+      'Climatisation automatique 4 zones',
+      'Terrain Response 2 Pro',
+      'Sièges SVR en cuir Windsor perforé',
+      'Jantes SVR forgées 22"',
+      'Suspension pneumatique adaptative',
+      'Caméra 360° avec Wade Sensing',
+      'Système audio Meridian Signature'
+    ]
+  },
+
+  {
+    id: '50',
+    name: 'Audi RS3 Sportback',
+    brand: 'Audi',
+    category: 'Sport',
+    price: 680,
+    image: audiRS3_1,
+    images: [audiRS3_1],
+    description: 'Compacte haute performance Audi RS3 avec moteur 5 cylindres légendaire.',
+    technicalSpecs: {
+      engine: 'Essence 2.5L TFSI 5 cylindres',
+      power: '400 ch',
+      acceleration: '0-100 km/h en 3.8s',
+      topSpeed: '290 km/h',
+      transmission: 'S tronic 7 rapports',
+      fuel: 'Essence',
+      consumption: '9.0L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Audi Virtual Cockpit plus RS',
+      'Climatisation automatique',
+      'MMI navigation plus',
+      'Sièges baquets RS en cuir Nappa',
+      'Jantes RS 19" titane mat',
+      'Projecteurs Matrix LED',
+      'Caméra de recul',
+      'Système audio Bang & Olufsen'
+    ]
+  },
+
+  {
+    id: '51',
+    name: 'Audi RS6 Avant',
+    brand: 'Audi',
+    category: 'Sport',
+    price: 950,
+    image: audiRS6_1,
+    images: [audiRS6_1],
+    description: 'Break super-sportif Audi RS6 - performances extrêmes et praticité.',
+    technicalSpecs: {
+      engine: 'Essence 4.0L V8 TFSI Biturbo',
+      power: '600 ch',
+      acceleration: '0-100 km/h en 3.6s',
+      topSpeed: '305 km/h',
+      transmission: 'tiptronic 8 rapports',
+      fuel: 'Essence',
+      consumption: '11.7L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Audi Virtual Cockpit plus RS',
+      'Climatisation automatique 4 zones',
+      'MMI navigation plus',
+      'Sièges baquets RS en cuir Valcona',
+      'Jantes RS 5 doubles branches 22"',
+      'Matrix LED avec signature RS',
+      'Caméras top view',
+      'Système audio Bang & Olufsen Advanced'
+    ]
+  },
+
+  {
+    id: '52',
+    name: 'Audi RSQ3 Sportback',
+    brand: 'Audi',
+    category: 'SUV',
+    price: 720,
+    image: audiRSQ3_1,
+    images: [audiRSQ3_1],
+    description: 'SUV compact haute performance Audi RSQ3 avec moteur 5 cylindres.',
+    technicalSpecs: {
+      engine: 'Essence 2.5L TFSI 5 cylindres',
+      power: '400 ch',
+      acceleration: '0-100 km/h en 4.5s',
+      topSpeed: '280 km/h',
+      transmission: 'S tronic 7 rapports',
+      fuel: 'Essence',
+      consumption: '9.5L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Audi Virtual Cockpit plus RS',
+      'Climatisation automatique 3 zones',
+      'MMI navigation plus',
+      'Sièges baquets RS en cuir Nappa',
+      'Jantes RS 5 branches 20"',
+      'Projecteurs Matrix LED',
+      'Caméra de recul avec guidage',
+      'Système audio Bang & Olufsen'
+    ]
+  },
+
+  {
+    id: '53',
+    name: 'Volkswagen T-Cross 1.0 TSI',
+    brand: 'Volkswagen',
+    category: 'SUV',
+    price: 220,
+    image: volkswagenTaigo_1,
+    images: [volkswagenTaigo_1],
+    description: 'SUV urbain Volkswagen T-Cross - agilité et praticité en ville.',
+    technicalSpecs: {
+      engine: 'Essence 1.0L TSI',
+      power: '110 ch',
+      acceleration: '0-100 km/h en 10.2s',
+      topSpeed: '190 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Essence',
+      consumption: '5.4L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Composition Media avec écran 8"',
+      'Climatisation manuelle',
+      'Digital Cockpit',
+      'Sièges en tissu Titanbblack',
+      'Jantes alliage 16"',
+      'Projecteurs halogènes',
+      'App-Connect',
+      'Volant multifonction'
+    ]
+  },
+
+  {
+    id: '54',
+    name: 'Volkswagen Tiguan 2.0 TDI',
+    brand: 'Volkswagen',
+    category: 'SUV',
+    price: 280,
+    image: volkswagenTiguanAncient_1,
+    images: [volkswagenTiguanAncient_1],
+    description: 'SUV familial Volkswagen Tiguan - polyvalence et qualité allemande.',
+    technicalSpecs: {
+      engine: 'Diesel 2.0L TDI',
+      power: '150 ch',
+      acceleration: '0-100 km/h en 9.3s',
+      topSpeed: '203 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Diesel',
+      consumption: '5.8L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Composition Media',
+      'Climatisation automatique Climatronic',
+      'Digital Cockpit',
+      'Sièges en tissu comfort',
+      'Jantes alliage 17" Tulsa',
+      'Éclairage LED',
+      'App-Connect',
+      'Régulateur de vitesse'
+    ]
+  },
+
+  {
+    id: '55',
+    name: 'Volkswagen Tiguan Nouvelle Génération',
+    brand: 'Volkswagen',
+    category: 'SUV',
+    price: 320,
+    image: volkswagenTiguanNV_1,
+    images: [volkswagenTiguanNV_1],
+    description: 'SUV nouvelle génération Volkswagen Tiguan avec design modernisé.',
+    technicalSpecs: {
+      engine: 'Essence 1.5L TSI',
+      power: '150 ch',
+      acceleration: '0-100 km/h en 9.1s',
+      topSpeed: '205 km/h',
+      transmission: 'DSG automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '6.2L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Discover Pro avec navigation',
+      'Climatisation automatique 3 zones',
+      'Digital Cockpit Pro',
+      'Sièges confort en tissu/similicuir',
+      'Jantes alliage 18" Suzuka',
+      'IQ.LIGHT LED Matrix',
+      'App-Connect Wireless',
+      'Travel Assist'
+    ]
+  },
+
+  {
+    id: '56',
+    name: 'Mercedes-Benz Vito Tourer',
+    brand: 'Mercedes-Benz',
+    category: 'Utilitaire',
+    price: 350,
+    image: mercedesVanUtilitaire_1,
+    images: [mercedesVanUtilitaire_1],
+    description: 'Utilitaire Mercedes-Benz Vito Tourer pour transport professionnel et familial.',
+    technicalSpecs: {
+      engine: 'Diesel 2.1L CDI',
+      power: '136 ch',
+      acceleration: '0-100 km/h en 12.8s',
+      topSpeed: '175 km/h',
+      transmission: 'Manuelle 6 rapports',
+      fuel: 'Diesel',
+      consumption: '7.9L/100km',
+      seats: '8 places'
+    },
+    equipment: [
+      'Audio 15 avec Bluetooth',
+      'Climatisation cabine',
+      'Sièges modulables',
+      'Banquettes 3 places',
+      'Jantes acier 16"',
+      'Éclairage halogène',
+      'Portes coulissantes latérales',
+      'ESP avec ASR'
+    ]
+  },
+
+  {
+    id: '57',
+    name: 'Škoda Octavia RS',
+    brand: 'Škoda',
+    category: 'Sport',
+    price: 350,
+    image: skodaVRS_1,
+    images: [skodaVRS_1],
+    description: 'Berline sportive Škoda Octavia RS - performances et praticité combinées.',
+    technicalSpecs: {
+      engine: 'Essence 2.0L TSI',
+      power: '245 ch',
+      acceleration: '0-100 km/h en 6.7s',
+      topSpeed: '250 km/h',
+      transmission: 'DSG automatique 7 rapports',
+      fuel: 'Essence',
+      consumption: '7.1L/100km',
+      seats: '5 places'
+    },
+    equipment: [
+      'Škoda Laura avec navigation',
+      'Climatisation automatique 3 zones',
+      'Virtual Cockpit RS',
+      'Sièges sport RS en Alcantara',
+      'Jantes RS 19"',
+      'Matrix LED headlights',
+      'DCC adaptive chassis',
+      'Canton Sound System'
+    ]
+  },
+
+  {
+    id: '58',
+    name: 'BMW X5 xDrive30d',
+    brand: 'BMW',
+    category: 'SUV',
+    price: 680,
+    image: bmwX5_1,
+    images: [bmwX5_1],
+    description: 'SUV premium BMW X5 avec traction intégrale et équipements haut de gamme.',
+    technicalSpecs: {
+      engine: 'Diesel 3.0L TwinPower Turbo',
+      power: '265 ch',
+      acceleration: '0-100 km/h en 6.5s',
+      topSpeed: '230 km/h',
+      transmission: 'Automatique Steptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '7.4L/100km',
+      seats: '7 places'
+    },
+    equipment: [
+      'BMW Live Cockpit Professional',
+      'Climatisation automatique 4 zones',
+      'Sièges Vernasca en cuir chauffants',
+      'Jantes M double bâtons 20"',
+      'Suspension pneumatique adaptative',
+      'Caméra Surround View 360°',
+      'Système audio premium',
+      'Toit panoramique Sky Lounge'
+    ]
+  },
+
+  {
+    id: '59',
+    name: 'BMW X7 xDrive40d',
+    brand: 'BMW',
+    category: 'SUV',
+    price: 850,
+    image: bmwX7_1,
+    images: [bmwX7_1],
+    description: 'SUV de luxe BMW X7 - le summum du raffinement et de l\'espace.',
+    technicalSpecs: {
+      engine: 'Diesel 3.0L TwinPower Turbo',
+      power: '340 ch',
+      acceleration: '0-100 km/h en 5.8s',
+      topSpeed: '250 km/h',
+      transmission: 'Automatique Steptronic 8 rapports',
+      fuel: 'Diesel',
+      consumption: '8.1L/100km',
+      seats: '7 places'
+    },
+    equipment: [
+      'BMW Operating System 8.0',
+      'Climatisation automatique 4 zones',
+      'Sièges Individual en cuir Merino',
+      'Jantes M Performance 22"',
+      'Suspension pneumatique à 4 roues',
+      'BMW Laser Light',
+      'Système audio Bowers & Wilkins',
+      'Toit panoramique Sky Lounge LED'
+    ]
+  }
+];
+
+export const brands = [
+  { value: "all", label: "Toutes les marques" },
+  { value: "Peugeot", label: "Peugeot" },
+  { value: "BMW", label: "BMW" },
+  { value: "Audi", label: "Audi" },
+  { value: "Mercedes-Benz", label: "Mercedes-Benz" },
+  { value: "Aston Martin", label: "Aston Martin" },
+  { value: "Opel", label: "Opel" },
+  { value: "SEAT", label: "SEAT" },
+  { value: "Porsche", label: "Porsche" },
+  { value: "Renault", label: "Renault" },
+  { value: "Volkswagen", label: "Volkswagen" },
+  { value: "Škoda", label: "Škoda" },
+  { value: "Fiat", label: "Fiat" },
+  { value: "Abarth", label: "Abarth" },
+  { value: "Land Rover", label: "Land Rover" },
+];
+
+export const categories = [
+  { value: "all", label: "Toutes les catégories" },
+  { value: "Citadine", label: "Citadine" },
+  { value: "Berline", label: "Berline" },
+  { value: "Break", label: "Break" },
+  { value: "Coupé", label: "Coupé" },
+  { value: "SUV", label: "SUV" },
+  { value: "Utilitaire", label: "Utilitaire" },
+  { value: "Sport", label: "Sport" },
+  { value: "Cabriolet", label: "Cabriolet" },
+  { value: "Luxe", label: "Luxe" },
+];
+
+export const priceRanges = [
+  { value: "all", label: "Tous les prix" },
+  { value: "250", label: "Jusqu'à 250€/jour" },
+  { value: "500", label: "Jusqu'à 500€/jour" },
+  { value: "1000", label: "Jusqu'à 1000€/jour" },
+  { value: "2000", label: "Plus de 1000€/jour" },
+];

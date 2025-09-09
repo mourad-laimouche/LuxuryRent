@@ -1,0 +1,95 @@
+Building
+Failed
+10:31:27 PM: Netlify Build                                                 
+10:31:27 PM: ────────────────────────────────────────────────────────────────
+10:31:27 PM: ​
+10:31:27 PM: ❯ Version
+10:31:27 PM:   @netlify/build 35.0.2
+10:31:27 PM: ​
+10:31:27 PM: ❯ Flags
+10:31:27 PM:   accountId: 66d09a71b5c0a8414ba97fe5
+10:31:27 PM:   baseRelDir: true
+10:31:27 PM:   buildId: 689278185bcb9b0cfa9974c0
+10:31:27 PM:   deployId: 689278185bcb9b0cfa9974c2
+10:31:27 PM: ​
+10:31:27 PM: ❯ Current directory
+10:31:27 PM:   /opt/build/repo
+10:31:27 PM: ​
+10:31:27 PM: ❯ Config file
+10:31:27 PM:   /opt/build/repo/netlify.toml
+10:31:27 PM: ​
+10:31:27 PM: ❯ Context
+10:31:27 PM:   production
+10:31:27 PM: ​
+10:31:27 PM: build.command from netlify.toml                               
+10:31:27 PM: ────────────────────────────────────────────────────────────────
+10:31:27 PM: ​
+10:31:27 PM: $ npm install && npm run build
+10:31:28 PM: up to date, audited 399 packages in 1s
+10:31:28 PM: 53 packages are looking for funding
+10:31:28 PM:   run `npm fund` for details
+10:31:28 PM: 3 low severity vulnerabilities
+10:31:28 PM: To address all issues, run:
+10:31:28 PM:   npm audit fix
+10:31:28 PM: Run `npm audit` for details.
+10:31:28 PM: > rest-express@1.0.0 build
+10:31:28 PM: > vite build && esbuild server/index.ts --platform=node --packages=external --bundle --format=esm --outdir=dist
+10:31:28 PM: sh: 1: vite: not found
+10:31:28 PM: ​
+10:31:28 PM: "build.command" failed                                        
+10:31:28 PM: ────────────────────────────────────────────────────────────────
+10:31:28 PM: ​
+10:31:28 PM:   Error message
+10:31:28 PM:   Command failed with exit code 127: npm install && npm run build (https://ntl.fyi/exit-code-127)
+10:31:28 PM: ​
+10:31:28 PM:   Error location
+10:31:28 PM:   In build.command from netlify.toml:
+10:31:28 PM:   npm install && npm run build
+10:31:28 PM: ​
+10:31:28 PM:   Resolved config
+10:31:28 PM:   build:
+10:31:28 PM:     command: npm install && npm run build
+10:31:28 PM:     commandOrigin: config
+10:31:28 PM:     environment:
+10:31:28 PM:       - NODE_ENV
+10:31:28 PM:     processing:
+10:31:28 PM:       css:
+10:31:28 PM:         bundle: true
+10:31:28 PM:         minify: true
+10:31:28 PM:       html:
+10:31:28 PM:         pretty_urls: true
+10:31:28 PM:       js:
+10:31:28 PM:         bundle: true
+10:31:28 PM:         minify: true
+10:31:28 PM:       skip_processing: false
+10:31:28 PM:     publish: /opt/build/repo/dist/public
+10:31:28 PM:     publishOrigin: config
+10:31:28 PM:   headers:
+10:31:29 PM: Failed during stage 'building site': Build script returned non-zero exit code: 2 (https://ntl.fyi/exit-code-2)
+10:31:29 PM:     - for: /*
+      values:
+        Content-Security-Policy: "default-src 'self'; img-src 'self' data: https:;
+          style-src 'self' 'unsafe-inline' https:; script-src 'self'; font-src
+          'self' https:; connect-src 'self' https:;"
+        Referrer-Policy: strict-origin-when-cross-origin
+        X-Content-Type-Options: nosniff
+        X-Frame-Options: DENY
+        X-XSS-Protection: 1; mode=block
+    - for: /assets/*
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.css
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+    - for: /*.js
+      values:
+        Cache-Control: public, max-age=31536000, immutable
+  headersOrigin: config
+  redirects:
+    - from: /*
+      status: 200
+      to: /index.html
+  redirectsOrigin: config
+10:31:29 PM: Build failed due to a user error: Build script returned non-zero exit code: 2
+10:31:29 PM: Failing build: Failed to build site
+10:31:29 PM: Finished processing build request in 23.529s
