@@ -1001,7 +1001,7 @@ export const cars: Car[] = [
     pricePerDayDA: 20000,
     image: '/images/cars/kamiq/kamiq-1.jpg',
     gallery: [
-      '/images/cars/kamiq/kamiq (1).jpg',
+      '/images/cars/kamiq/kamiq-1.jpg',
       '/images/cars/kamiq/kamiq (2).jpg',
       '/images/cars/kamiq/kamiq (3).jpg',
       '/images/cars/kamiq/kamiq (4).jpg'
@@ -1031,9 +1031,9 @@ export const cars: Car[] = [
     category: 'Citadine',
     pricePerDay: 80,
     pricePerDayDA: 20000,
-    image: '/images/cars/a1/a1 (1).jpg',
+    image: '/images/cars/a1/a1-1.jpg',
     gallery: [
-      '/images/cars/a1/a1 (1).jpg',
+      '/images/cars/a1/a1-1.jpg',
       '/images/cars/a1/a1 (2).jpg',
       '/images/cars/a1/a1 (3).jpg',
       '/images/cars/a1/a1 (4).jpg',
@@ -1065,9 +1065,9 @@ export const cars: Car[] = [
     category: 'Berline',
     pricePerDay: 200,
     pricePerDayDA: 50000,
-    image: '/images/cars/520d/520d (1).jpg',
+    image: '/images/cars/520d/520d-1.jpg',
     gallery: [
-      '/images/cars/520d/520d (1).jpg',
+      '/images/cars/520d/520d-1.jpg',
       '/images/cars/520d/520d (2).jpg',
       '/images/cars/520d/520d (3).jpg',
       '/images/cars/520d/520d (4).jpg',
@@ -1164,9 +1164,9 @@ export const cars: Car[] = [
     category: 'Sport',
     pricePerDay: 160,
     pricePerDayDA: 40000,
-    image: '/images/cars/a35/a35 (1).jpg',
+    image: '/images/cars/a35/a35-1.jpg',
     gallery: [
-      '/images/cars/a35/a35 (1).jpg',
+      '/images/cars/a35/a35-1.jpg',
       '/images/cars/a35/a35 (2).jpg',
       '/images/cars/a35/a35 (4).jpg',
       '/images/cars/a35/a35 (5).jpg'
@@ -1227,9 +1227,9 @@ export const cars: Car[] = [
     category: 'Citadine',
     pricePerDay: 72,
     pricePerDayDA: 18000,
-    image: '/images/cars/polo/polo (1).jpg',
+    image: '/images/cars/polo/polo-1.jpg',
     gallery: [
-      '/images/cars/polo/polo (1).jpg',
+      '/images/cars/polo/polo-1.jpg',
       '/images/cars/polo/polo (2).jpg'
     ],
     description: 'Citadine Volkswagen Polo compacte, idéale pour la ville et économique.',
@@ -1259,7 +1259,7 @@ export const cars: Car[] = [
     pricePerDayDA: 40000,
     image: '/images/cars/ateca/ateca (1).jpg',
     gallery: [
-      '/images/cars/ateca/ateca (1).jpg',
+      '/images/cars/ateca/ateca-1.jpg',
       '/images/cars/ateca/ateca (2).jpg'
     ],
     description: 'SUV SEAT Ateca combinant design méditerranéen et praticité moderne.',
@@ -1287,9 +1287,9 @@ export const cars: Car[] = [
     category: 'SUV',
     pricePerDay: 120,
     pricePerDayDA: 30000,
-    image: '/images/cars/taigo/taigo (1).jpg',
+    image: '/images/cars/taigo/taigo-1.jpg',
     gallery: [
-      '/images/cars/taigo/taigo (1).jpg',
+      '/images/cars/taigo/taigo-1.jpg',
       '/images/cars/taigo/taigo (2).jpg',
       '/images/cars/taigo/taigo (3).jpg',
       '/images/cars/taigo/taigo (4).jpg'
@@ -1319,9 +1319,9 @@ export const cars: Car[] = [
     category: 'Berline',
     pricePerDay: 80,
     pricePerDayDA: 20000,
-    image: '/images/cars/leon/leon (1).jpg',
+    image: '/images/cars/leon/leon-1.jpg',
     gallery: [
-      '/images/cars/leon/leon (1).jpg',
+      '/images/cars/leon/leon-1.jpg',
       '/images/cars/leon/leon (2).jpg',
       '/images/cars/leon/leon (3).jpg',
       '/images/cars/leon/leon (4).jpg',
@@ -1353,9 +1353,9 @@ export const cars: Car[] = [
     category: 'Citadine',
     pricePerDay: 60,
     pricePerDayDA: 15000,
-    image: '/images/cars/clio 5/clio  (1).jpg',
+    image: '/images/cars/clio 5/clio-1.jpg',
     gallery: [
-      '/images/cars/clio 5/clio  (1).jpg',
+      '/images/cars/clio 5/clio-1.jpg',
       '/images/cars/clio 5/clio  (2).jpg',
       '/images/cars/clio 5/clio  (3).jpg',
       '/images/cars/clio 5/clio  (4).jpg',
