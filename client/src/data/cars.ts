@@ -999,7 +999,7 @@ export const cars: Car[] = [
     category: 'SUV',
     pricePerDay: 80,
     pricePerDayDA: 20000,
-    image: '/images/cars/kamiq/kamiq (1).jpg',
+    image: '/images/cars/kamiq/kamiq-1.jpg',
     gallery: [
       '/images/cars/kamiq/kamiq (1).jpg',
       '/images/cars/kamiq/kamiq (2).jpg',
