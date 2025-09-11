@@ -631,36 +631,8 @@ export const cars: Car[] = [
     }
   },
 
-  // 19. Mercedes Viano - 100 000 DA / 400 €
-  {
-    id: '19',
-    slug: 'mercedes-viano',
-    name: 'Mercedes Viano',
-    category: 'Monospace',
-    pricePerDay: 400,
-    pricePerDayDA: 100000,
-    image: '/images/cars/viano/viano (1).jpg',
-    gallery: [
-      '/images/cars/viano/viano (1).jpg',
-      '/images/cars/viano/viano (2).jpg',
-      '/images/cars/viano/viano (3).jpg'
-    ],
-    description: 'Monospace Mercedes Viano premium pour transport de groupe avec luxe.',
-    features: [
-      'MBUX Navigation',
-      'Climatisation 3 zones',
-      'Sièges cuir chauffants',
-      'Portes coulissantes électriques',
-      'Jantes alliage 18"',
-      'Package confort'
-    ],
-    specifications: {
-      transmission: 'Automatique',
-      fuel: 'Diesel',
-      seats: 8,
-      luggage: '6 valises'
-    }
-  },
+ 
+  
 
   // 20. Range Rover SVR - 70 000 DA / 280 €
   {
@@ -1188,36 +1160,7 @@ export const cars: Car[] = [
     }
   },
 
-  // 35. Mercedes GLE Maybach - 70 000 DA / 280 €
-  {
-    id: '35',
-    slug: 'mercedes-gle-maybach',
-    name: 'Mercedes GLE Maybach',
-    category: 'Luxe',
-    pricePerDay: 280,
-    pricePerDayDA: 70000,
-    image: '/images/cars/gle-maybach/gle-maybach (1).jpg',
-    gallery: [
-      '/images/cars/gle-maybach/gle-maybach (1).jpg',
-      '/images/cars/gle-maybach/gle-maybach (2).jpg',
-      '/images/cars/gle-maybach/gle-maybach (3).jpg'
-    ],
-    description: 'SUV Mercedes GLE Maybach ultra-luxueux avec finitions exceptionnelles.',
-    features: [
-      'MBUX Hyperscreen',
-      'Climatisation 4 zones',
-      'Sièges Executive Maybach',
-      'Suspension pneumatique',
-      'Jantes Maybach 22"',
-      'Package Maybach'
-    ],
-    specifications: {
-      transmission: 'Automatique',
-      fuel: 'Essence',
-      seats: 5,
-      luggage: '4 valises'
-    }
-  },
+
 
   // 36. VW Polo - 18 000 DA / 72 €
   {

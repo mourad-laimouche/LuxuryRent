@@ -13,7 +13,7 @@ const Contact = () => {
     {
       icon: <MapPin className="h-6 w-6" />,
       title: "Adresse",
-      content: "Chraga, Alger, Algérie"
+      content: "Baba hassen, Alger, Algérie"
     },
     {
       icon: <Phone className="h-6 w-6" />,
@@ -229,46 +229,21 @@ const Contact = () => {
                 <div className="w-full lg:flex-1">
                   <div className="text-center text-muted-foreground mb-6">
                     <MapPin className="h-16 w-16 mx-auto mb-4 text-primary" />
-                    <p className="text-lg mb-2">Lea luxury location de voitures</p>
-                    <p className="text-sm">Chraga, Alger, Algérie</p>
+                    <p className="text-lg mb-2">Luxury location de voitures</p>
+                    <p className="text-sm">Baba hassen, Alger, Algérie</p>
                   </div>
                 </div>
                 <div className="w-full lg:flex-1 max-w-md mx-auto lg:max-w-none">
-                  <div className="bg-muted rounded-lg h-80 flex flex-col items-center justify-center p-6 border-2 border-dashed border-primary/20 hover:border-primary/40 transition-colors">
-                    <div className="mb-4">
-                      <svg className="h-16 w-16 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                        {/* Contour de la carte */}
-                        <rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
-                        {/* Routes horizontales */}
-                        <line x1="5" y1="8" x2="19" y2="8" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        <line x1="5" y1="16" x2="19" y2="16" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        {/* Routes verticales */}
-                        <line x1="8" y1="6" x2="8" y2="16" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        <line x1="12" y1="6" x2="12" y2="16" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        <line x1="16" y1="6" x2="16" y2="16" stroke="currentColor" strokeWidth="1" opacity="0.6"/>
-                        {/* Pin de localisation */}
-                        <circle cx="14" cy="10" r="2" fill="currentColor"/>
-                        <path d="M14 8c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm0 2.5c-.3 0-.5-.2-.5-.5s.2-.5.5-.5.5.2.5.5-.2.5-.5.5z"/>
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-semibold mb-2">Visitez notre showroom</h3>
-                    <p className="text-muted-foreground text-center mb-4">
-                      Cliquez pour ouvrir notre localisation dans Google Maps
-                    </p>
-                    <Button
-                      onClick={() => window.open("https://www.google.com/maps/place/Lea+luxury+location+de+voitures/@36.6946620,2.9649445,17z/data=!3m1!4b1!4m6!3m5!1s0x128faf004103544d:0x98a970f06eda2fec!8m2!3d36.6946620!4d2.9675194!16s%2Fg%2F11y1y5j9qk", "_blank")}
-                      className="bg-primary hover:bg-primary/90 text-primary-foreground"
-                      size="lg"
-                    >
-                      <svg className="h-5 w-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                        <rect x="3" y="4" width="18" height="14" rx="2" fill="none" stroke="currentColor" strokeWidth="2"/>
-                        <line x1="6" y1="8" x2="18" y2="8" stroke="currentColor" strokeWidth="1"/>
-                        <line x1="6" y1="12" x2="18" y2="12" stroke="currentColor" strokeWidth="1"/>
-                        <circle cx="14" cy="10" r="1.5"/>
-                      </svg>
-                      Ouvrir dans Google Maps
-                    </Button>
+                  <div className="rounded-lg overflow-hidden">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3199.172419853801!2d2.9704938628361037!3d36.694394428016295!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128faf004916333f%3A0x1cc1c12f5cda4130!2sDegui%20Cars!5e0!3m2!1sfr!2sdz!4v1757627914640!5m2!1sfr!2sdz" 
+                      width="100%" 
+                      height="300" 
+                      style={{border:0}} 
+                      allowFullScreen={true} 
+                      loading="lazy" 
+                      referrerPolicy="no-referrer-when-downgrade"
+                    />
                   </div>
                 </div>
               </div>
