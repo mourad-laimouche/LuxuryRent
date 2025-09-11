@@ -36,9 +36,9 @@ try {
   if (existsSync('dist/public/_headers')) {
     console.log('✅ _headers already exists');
   } else {
-    // Créer un fichier _headers simple
+    // Créer un fichier _headers avec CSP pour Google Maps
     const headers = `/*
-  X-Frame-Options: DENY
+  Content-Security-Policy: default-src 'self' 'unsafe-inline' 'unsafe-eval'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.googleapis.com https://*.gstatic.com *.google.com https://*.ggpht.com *.googleusercontent.com blob:; img-src 'self' https://*.googleapis.com https://*.gstatic.com *.google.com *.googleusercontent.com data:; frame-src *.google.com; connect-src 'self' https://*.googleapis.com *.google.com https://*.gstatic.com data: blob:; font-src https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; worker-src blob:;
   X-XSS-Protection: 1; mode=block
   X-Content-Type-Options: nosniff
 
